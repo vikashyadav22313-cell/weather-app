@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Loader } from "./Loader";
 
-export function DataShow({ selectedSuggestion, loading, setLoading }) {
+export function DataShow({ selectedSuggestion, loading}) {
   const [show, setShow] = useState(false);
   const [selectedDay, setSelectedDay] = useState(
     new Date().toISOString().split("T")[0]
