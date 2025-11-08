@@ -23,7 +23,7 @@ export function SearchBox({
   };
   return (
     <div className="searchbox">
-      <h1>How's the sky looking today?</h1>
+      <h1>{"How's the sky looking today?"}</h1>
 
       <div className="search_grid">
         <div className="searchbox_input">
