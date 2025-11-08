@@ -135,8 +135,8 @@ export function DataShow({ selectedSuggestion, loading}) {
           <h5>Daily forecast</h5>
           <div className="forecast_grid">
             {daily.time.map((days, i) => {
-              const date = new Date(days);
-              const current_day = Day[date.getDay()];
+              const forecastDate = new Date(days);
+              const current_day = Day[forecastDate.getDay()];
 
               const code = daily.weather_code[i];
               const maxTemp = daily.temperature_2m_max[i];
@@ -207,8 +207,8 @@ export function DataShow({ selectedSuggestion, loading}) {
             }))
             .filter((h) => h.hour.startsWith(selectedDay))
             .map((h, i) => {
-              const date = new Date(h.hour);
-              const hours = date.getHours();
+              const hourDate = new Date(h.hour);
+              const hours = hourDate.getHours();
               const condition = getWeatherCondition(h.code, h.temp, h.prep);
               const icon = iconMap[condition];
               const formattedHours =
