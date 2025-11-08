@@ -127,7 +127,7 @@ function App() {
             <DataShow
               selectedSuggestion={selectedSuggestion}
               loading={loading}
-              setLoading={setLoading}
+              
             />
           )}
         </main>
